@@ -47,13 +47,13 @@ COPY --from=build /build/run .
 CMD ["/app/run"]
 
 ```
+- 결과화면
 
 ```bash
 
 username@servername:~/step03Image$ docker images
 REPOSITORY               TAG       IMAGE ID       CREATED         SIZE
 java-app-optimized       latest    b609fe7b15d8   6 seconds ago   326MB
-seungjibaek2001/myimg1   1.0       b227b94d0ba9   2 hours ago     471MB
 chinarong2/myimg1        1.0       1bdb19af091b   2 hours ago     471MB
 
 ```
@@ -87,7 +87,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 ```
-
+- 결과 화면 
 ```bash
 
 username@servername:~/step03Image$ docker images
@@ -104,7 +104,6 @@ multi-run-image          latest    a832425de11d   About a minute ago   229MB
 빌드 시 불필요한 파일이 이미지에 포함되지 않도록 `.dockerignore` 파일을 설정하세요.
 
 ```dockerignore
-
 node_modules
 Dockerfile*
 .git
